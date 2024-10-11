@@ -24,7 +24,7 @@ x = data[['Total','Discounts','Brewed_Coffee_12_oz','Brewed_Coffee_16_oz','Aquaf
 x, xt, y, yt = train_test_split(x, y, test_size=0.3)
 
 model = RF(n_estimators=100, n_jobs=-1, max_depth=5)
-model.fit(x,y)
+modelFit = model.fit(x,y)
 
 data2 = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/master/AssignmentData/assignment3test.csv")
 pred = model.predict(data2[['Total','Discounts','Brewed_Coffee_12_oz','Brewed_Coffee_16_oz','Aquafina_Water','Muffin_Pastry_Case','Extra_Syrup','Bottled_Soda_Mt_Dew',
