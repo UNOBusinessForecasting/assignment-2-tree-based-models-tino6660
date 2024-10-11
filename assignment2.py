@@ -27,5 +27,5 @@ model = RF(n_estimators=100, n_jobs=-1, max_depth=5)
 modelFit = model.fit(x,y)
 
 data2 = pd.read_csv("https://github.com/dustywhite7/Econ8310/raw/master/AssignmentData/assignment3test.csv")
-X_2 = data2.drop[columns='meal']
+X_2 = data2.drop(columns=['meal'])
 pred = model.predict(X_2)
